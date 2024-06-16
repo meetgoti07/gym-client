@@ -39,7 +39,8 @@ import Home3 from "./Home3";
 import Classes from "./Classes";
 import Profile from "./Profile";
 import UserDetails from "./UserDetails";
-import StatusPage from "./StatusPage";
+import PaymentSuccessPage from "./PaymentSuccessPage";
+import PaymentFailedPage from './PaymentFailedPage';
 
 function Index() {
   const basename = "";
@@ -77,7 +78,8 @@ function Index() {
           <Route path="/classes" exact element={<Classes />} />
           <Route path="/Cart" exact element={<Cart />} />
           <Route path="/user-details" exact element={<UserDetails />} />
-          <Route path="/statuspage" exact element={<StatusPage />} />
+          <Route path="/payment-success" exact element={<PaymentSuccessPage />} />
+          <Route path="/payment-failed" exact element={<PaymentFailedPage />} />
           <Route path="/blog-grid" exact element={<BlogGrid />} />
           <Route
             path="/blog-large-sidebar"
