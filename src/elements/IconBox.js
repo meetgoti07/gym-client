@@ -8,7 +8,7 @@ const boxSVG = [
     svg: SVGICON.iconBox1,
     title: "Our Mission",
     num: 1,
-    content:"Our mission is to empower individuals to prioritize their health and well-being by providing.....",
+    content:"We are dedicated to empowering individuals on their fitness journeys, going beyond just to provide a state-of-the-art facility and fostering a supportive community that encourages and guides each member to achieve their unique health and wellness goals.",
     
   },
   {
@@ -16,7 +16,7 @@ const boxSVG = [
     svg: SVGICON.iconBox2,
     title: "Vision",
     num: 2,
-    content:"Our gym site is a dynamic center for health and wellness, offering cutting-edge facilities and.....",
+    content:"We aspire to be the most desired fitness group in the region, recognized for our unwavering commitment to holistic well-being, offering enduring support, camaraderie and lifelong commitment to a healthier, happier lifestyle.",
    
   },
 ];
@@ -42,7 +42,7 @@ const IconBox = () => {
                 <h4 className="dz-title m-b10">
                   <Link to="/about-us">{item.title}</Link>
                 </h4>
-                <p className="m-b15">
+                <p className="m-b15 text-white">
                   {item.content}
                 </p>
                 <Link to="/about-us" className="read-more">

@@ -49,11 +49,6 @@ export const AboutServicesDetails = () => {
             Start your training with our Professional Trainers
           </p>
         </div>
-        <p>
-          Nunc vulputate urna ut erat posuere accumsan. Curabitur ut commodo
-          mauris, ac volutpat dui. Nullam eget enim ut mi bibendum ultrices.
-          Pellentesque non feugia.
-        </p>
         <ul className="pr-list list-italic m-t30 m-b35">
           {serviceList.map((item, ind) => (
             <li key={ind}>

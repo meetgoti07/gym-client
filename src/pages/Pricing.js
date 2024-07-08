@@ -6,9 +6,9 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 
 const pricingBlog = [
-    { rate: '49', title: 'Basic', prime: 'premium' },
+    { rate: '8500', title: 'Basic', prime: 'premium' },
     { rate: '59', title: 'Ultra' },
-    { rate: '69', title: 'Pro' },
+    { rate: '80000', title: 'Pro' },
 ];
 
 const Pricing = () => {
@@ -57,40 +57,6 @@ const Pricing = () => {
         }
     }
 
-    // const buyMembership = async (data) => {
-    //     try {
-    //         const AuthStr = 'Bearer '.concat(localStorage.getItem('token'));
-    //         const response = await axios.post("http://localhost:5000/api/clients/membership",
-    //             {
-    //                 name: data.title,
-    //                 price: data.rate,
-    //                 duraion: 30,
-    //             },
-    //             {
-    //                 headers: {
-    //                     "Authorization": AuthStr
-    //                 }
-    //             }
-    //         );
-
-    //         if(response.data.success === false) {
-    //             Swal.fire({
-    //                 title: "Failed",
-    //                 text: `${response.data.message}!`,
-    //                 icon: "info"
-    //             });
-    //             return;
-    //         }
-    //         Swal.fire({
-    //             title: "Success",
-    //             text: "You are registered this membership!",
-    //             icon: "success"
-    //         });
-    //         setRefresh(!refresh);
-    //     } catch (error) {
-    //         console.error("Error fetching purchase history:", error);
-    //     }
-    // };
 
     return (
         <>

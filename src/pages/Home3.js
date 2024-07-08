@@ -5,13 +5,10 @@ import ModalVideo from "react-modal-video";
 import HomebannerCard from "../elements/HomebannerCard";
 import { AboutServicesDetails } from "../components/AboutServices";
 import IconBox from "../elements/IconBox";
-import { Link, useLocation } from "react-router-dom";
-import Home3Services from "../components/Home3Services";
+import {useLocation } from "react-router-dom";
 import Portfolio from "../components/Portfolio";
-import Home3testimonial from "../components/Home3testimonial";
 import OurBlog from "../components/OurBlog";
 import Clients from "../elements/Clients";
-import ContectInfo from "../components/ContectInfo";
 import axios from "axios";
 import {
   ReactCompareSlider,
@@ -20,7 +17,6 @@ import {
 
 const Home3 = () => {
   const [open, setOpen] = useState(false);
-  const swiperRef = useRef(null);
   const location = useLocation().pathname;
 
   useEffect(() => {
@@ -153,40 +149,6 @@ const Home3 = () => {
         <section className="clearfix">
           <Portfolio />
         </section>
-        {/* <section
-          className="content-inner testimonial-swiper-wrapper-3"
-          style={{
-            backgroundImage: `url(${IMAGES.BgImage9})`,
-            backgroundPosition: " center",
-            backgroundSize: " 100%",
-          }}
-        > */}
-          {/* <div className="container">
-            <div className="section-head style-1 text-center">
-              <h5 className="sub-title wow fadeInUp">TESTIMONIAL</h5>
-              <h2 className="title wow fadeInUp">
-                What <span className="text-primary">Client</span> Say’s
-              </h2>
-            </div>
-            <Home3testimonial refVal={swiperRef} />
-          </div> */}
-          {/* <div
-            onClick={() => {
-              swiperRef.current.swiper.slidePrev();
-            }}
-            className="dz-swiper-prev3"
-          >
-            <i className="fa-solid fa-arrow-left"></i>
-          </div> */}
-          {/* <div
-            onClick={() => {
-              swiperRef.current.swiper.slideNext();
-            }}
-            className="dz-swiper-next3"
-          >
-            <i className="fa-solid fa-arrow-right"></i>
-          </div> */}
-        {/* </section> */}
         <section
           className="content-inner-2 overflow-hidden"
           style={{
