@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 
 //Auth
@@ -6,14 +6,11 @@ import Login from '../pages/Login';
 import Registration from '../pages/Registration';
 
 //layouts
-import Header, { Mainheader } from "./../layouts/Header";
+import Header from "./../layouts/Header";
 import Footer from "./../layouts/Footer";
-import Footer2 from "../layouts/Footer2";
 import ScrollToTop from "./../layouts/ScrollToTop";
 
 
-//Pages
-import Home from "./Home";
 import AboutUs from "./AboutUs";
 import Team from "./Team";
 import Pricing from "./Pricing";
@@ -33,8 +30,6 @@ import BlogDetail from "./BlogDetail";
 import Appointment from "./Appointment";
 import WeightCalculator from "./WeightCalculator";
 import ContactUs from "./ContactUs";
-import Home2 from "./Home2";
-import Header2 from "../layouts/Header2";
 import Home3 from "./Home3";
 import Classes from "./Classes";
 import Profile from "./Profile";
@@ -128,36 +123,6 @@ function MainLayout() {
       <Header />
       <Outlet />
       <Footer />
-    </div>
-  );
-}
-function MainLayout2() {
-  return (
-    <div className="page-wraper">
-      <Header2 />
-      <Outlet />
-      <Footer2 />
-    </div>
-  );
-}
-function MainLayout3() {
-  const [headerFix, setheaderFix] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setheaderFix(window.scrollY > 50);
-    });
-  }, []);
-  return (
-    <div className="page-wraper">
-      <header className="site-header mo-left header header-transparent style-1">
-        <div
-          className={`sticky-header mt-3 main-bar-wraper navbar-expand-lg ${headerFix ? "is-fixed" : ""
-            }`}
-        >
-          <Mainheader />
-        </div>
-      </header>
-      <Outlet />
     </div>
   );
 }

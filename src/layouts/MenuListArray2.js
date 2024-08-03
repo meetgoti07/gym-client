@@ -83,7 +83,7 @@ export const MenuListArray2 = [
     },
     {
        
-                title: 'Blog Grid',
+                title: 'Blog',
                 to: '/blog-grid',
             
             // {

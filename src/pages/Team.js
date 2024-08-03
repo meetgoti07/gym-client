@@ -1,17 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { IMAGES } from "../constants/theme";
-import NewsLetter from "../elements/NewsLetter";
 import PageTitle from "../elements/PageTitle";
 import axios from "axios";
 
-const mediaBlog = [
-  { images: IMAGES.team1, title: "EMILY" },
-  { images: IMAGES.team2, title: "EMMA" },
-  { images: IMAGES.team3, title: "OLIVER" },
-  { images: IMAGES.team4, title: "ELIJAH" },
-  { images: IMAGES.team5, title: "JAMES" },
-  { images: IMAGES.team6, title: "AMELIA" },
-];
 
 const Team = () => {
   const [trainers, setTrainers] = useState([]);

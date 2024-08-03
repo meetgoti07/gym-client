@@ -8,7 +8,6 @@ import Cart from "../images/cart.png";
 import login from "../images/user.png";
 // import Profile from '../pages/Profile';
 
-import axios from 'axios';
 
 const Header = () => {
   const [headerFix, setheaderFix] = React.useState(false);
@@ -19,14 +18,14 @@ const Header = () => {
   }, []);
   return (
     <>
-      <header className="site-header mo-left header header-transparent style-1">
+      <header className="site-header mo-left header header-transparent style-2">
         <div className="top-bar">
           <div className="container">
             <div className="dz-topbar-inner d-flex justify-content-between align-items-center">
               <div className="dz-topbar-left">
                 <ul>
                   <li>
-                    <i className="fa-regular fa-envelope"></i> info@example.com
+                    <i className="fa-regular fa-envelope"></i> blackfusefitness@gmail.com
                   </li>
                 </ul>
               </div>
@@ -37,7 +36,7 @@ const Header = () => {
                     08:00 PM
                   </li>{" "}
                   <li>
-                    <i className="fa fa-phone"></i> +91-1234567890
+                    <i className="fa fa-phone"></i> (876) 295-5173/ (876) 469-2523
                   </li>
                 </ul>
               </div>
@@ -82,10 +81,12 @@ export const Mainheader = () => {
     ...previousState,
     ...updatedState,
   });
+
   const initialState = {
     active: "",
     activeSubmenu: "",
   };
+  
   const [state, setState] = useReducer(reducer, initialState);
   const handleMenuActive = (status) => {
     setState({ active: status });
@@ -93,6 +94,7 @@ export const Mainheader = () => {
       setState({ active: "" });
     }
   };
+
   const handleSubmenuActive = (status) => {
     setState({ activeSubmenu: status });
     if (state.activeSubmenu === status) {
@@ -305,34 +307,7 @@ export const Mainheader = () => {
                   <li>
                     <Link
                       target="_blank"
-                      to="https://www.facebook.com/"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </Link>
-                  </li>{" "}
-                  <li>
-                    <Link
-                      target="_blank"
-                      to="https://twitter.com/?lang=en"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Link>
-                  </li>{" "}
-                  <li>
-                    <Link
-                      target="_blank"
-                      to="https://www.linkedin.com/"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </Link>
-                  </li>{" "}
-                  <li>
-                    <Link
-                      target="_blank"
-                      to="https://www.instagram.com/?hl=en"
+                      to="https://www.instagram.com/blackfusefitness/"
                       rel="noreferrer"
                     >
                       <i className="fab fa-instagram"></i>

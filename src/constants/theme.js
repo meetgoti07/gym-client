@@ -5,6 +5,14 @@ import circlebig from "../assets/images/pattern/circle-big.svg";
 import circlebig2 from "../assets/images/pattern/circle-2.svg";
 
 export const IMAGES = {
+
+  Img1: require("../assets/images/background/1 (1).jpg"),
+  Img2: require("../assets/images/background/1 (2).jpg"),
+  Img3: require("../assets/images/background/1 (3).jpg"),
+  Img4: require("../assets/images/background/1 (4).jpg"),
+  Img5: require("../assets/images/background/1 (5).jpg"),
+  Img6: require("../assets/images/background/1 (6).jpg"),
+  Img7: require("../assets/images/background/1(7).png"),
   BgImage1: require("../assets/images/background/bg1.png"),
   BgImage2: require("../assets/images/background/bg2.png"),
   BgImage3: require("../assets/images/background/bg3.png"),
@@ -26,6 +34,7 @@ export const IMAGES = {
   Slide2Starts: require("../assets/images/main-slider/slider2/stars.png"),
 
   //logo
+  banner: require("../assets/images/banner.jpeg"),
   logo: require("../assets/images/logo.png"),
   logo1: require("../assets/images/logo/logo1.png"),
   logo2: require("../assets/images/logo/logo2.png"),

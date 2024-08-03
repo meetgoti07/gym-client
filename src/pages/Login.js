@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 // import { connect, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import "../assets/css/style2.css";
@@ -6,11 +6,9 @@ import axios from 'axios';
 // import { loadingToggleAction,loginAction,
 // } from '../../store/actions/AuthActions';
 
-// image
-//import logo from "../../images/logo-full.png";
-import logo from "../images/logo.png";
-import logoText from "../images/logo-text.png";
+
 import loginbg from "../images/pic1.png";
+import { IMAGES } from '../constants/theme';
 
 function Login(props) {
 	const [email, setEmail] = useState('harshdob937@gmail.com');
@@ -60,11 +58,9 @@ function Login(props) {
 			<div className="login-aside text-center  d-flex flex-column flex-row-auto">
 				<div className="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
 					<div className="text-center mb-4 pt-5 brand-logo">
-						<img className="logo-abbr me-1" src={logo} alt="" width="80" />
-						<img className="brand-title ms-2" src={logoText} alt="" width="108" />
+						<img className="logo-abbr me-1" src={IMAGES.banner} alt="" width="200" />
 					</div>
 					<h3 className="mb-2" style={{color:'#242424'}}>Welcome back!</h3>
-					<p>User Experience & Interface Design <br />Strategy SaaS Solutions</p>
 				</div>
 				<div className="aside-image" style={{ backgroundImage: "url(" + loginbg + ")" }}></div>
 			</div>

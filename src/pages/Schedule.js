@@ -1,6 +1,5 @@
 import React from 'react';
 
-import NewsLetter from '../elements/NewsLetter';
 import PageTitle from '../elements/PageTitle';
 import ScheduleTable from '../elements/ScheduleTable';
 

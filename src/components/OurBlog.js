@@ -1,62 +1,11 @@
-import React,{useEffect,useState} from "react";
+import React from "react";
 import { IMAGES } from "../constants/theme";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { Autoplay } from "swiper";
-import axios from "axios";
 
-const carousel = [
-  {
-    date: "07",
-    month: "January",
-    name: "By Frenchi",
-    comments: "20 Comments",
-    title: "Best 50 Tips For Fitness.",
-    bgImg: IMAGES.overlayBoxpic1,
-  },
-  {
-    date: "09",
-    month: "February",
-    name: "By aleena",
-    comments: "14 Comments",
-    title: "Top Diet Nutration lists.",
-    bgImg: IMAGES.overlayBoxpic2,
-  },
-  {
-    date: "04",
-    month: "March",
-    name: "By Johnethan",
-    comments: "20 Comments",
-    title: "Top 40+ Fitness Trainers",
-    bgImg: IMAGES.overlayBoxpic3,
-  },
-  {
-    date: "07",
-    month: "January",
-    name: "By Frenchi",
-    comments: "20 Comments",
-    title: "Best 50 Tips For Fitness.",
-    bgImg: IMAGES.overlayBoxpic1,
-  },
-  {
-    date: "09",
-    month: "February",
-    name: "By aleena",
-    comments: "14 Comments",
-    title: "Top Diet Nutration lists.",
-    bgImg: IMAGES.overlayBoxpic2,
-  },
-  {
-    date: "04",
-    month: "March",
-    name: "By Johnethan",
-    comments: "20 Comments",
-    title: "Top 40+ Fitness Trainers",
-    bgImg: IMAGES.overlayBoxpic3,
-  },
-];
+
 const OurBlog = ({ blogs }) => {
-  const [isOpen, setOpen] = useState(false);
   
   return (
     <>

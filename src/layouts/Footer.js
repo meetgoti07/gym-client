@@ -11,65 +11,34 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="container">
                         <div className="row">
+                            <div className="col-xl-3 col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+
+                            </div>
                             <div className="col-xl-3 col-md-12">
                                 <div className="widget widget_about">
                                     <div className="footer-logo logo-dark">
                                         <Link to={"/"}><img className='select_logo_dark' src={IMAGES.logo} alt="" /></Link> 
                                     </div>
-                                    <p>A Wonderful Serenity Has Taken Possession Of My Entire Soul, Like These.</p>
+                                    <p>Unlease Your Beast</p>
                                     <h6 className="m-b15">Our Socials</h6>
                                     <div className="dz-social-icon style-1">
                                         <ul>									
                                             <li>
-                                                <Link target="_blank" to="https://www.facebook.com/" rel="noreferrer">
-                                                    <i className="fab fa-facebook-f"></i>
-                                                </Link>
-                                            </li>{" "}
-                                            <li>
-                                                <Link target="_blank" to="https://twitter.com/?lang=en" rel="noreferrer">
-                                                    <i className="fab fa-twitter"></i>
-                                                </Link>
-                                            </li>{" "}
-                                            <li>
-                                                <Link target="_blank" to="https://www.instagram.com/?hl=en" rel="noreferrer">
+                                                <Link target="_blank" to="https://www.instagram.com/blackfusefitness" rel="noreferrer">
                                                     <i className="fab fa-instagram"></i>
                                                 </Link>
                                             </li>{" "}
-                                            <li>
-                                                <Link target="_blank" to="https://www.whatsapp.com/" rel="noreferrer">
-                                                    <i className="fa-brands fa-whatsapp"></i>
-                                                </Link>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-md-4 wow fadeInUp" data-wow-delay="0.4s">
-                                <div className="widget recent-posts-entry">
-                                    <h4 className="footer-title">Blog Posts</h4>
-                                    <div className="widget-post-bx">
-                                        <div className="widget-post clearfix">
-                                            <div className="dz-info">
-                                                <h6 className="title"><Link to={"/blog-details"}>The Philosophy Of Best Fitness.</Link></h6>
-                                                <span className="post-date"> JUNE 18, 2023</span>
-                                            </div>
-                                        </div>
-                                        <div className="post-separator"></div>
-                                        <div className="widget-post clearfix">
-                                            <div className="dz-info">
-                                                <h6 className="title"><Link to={"/blog-details"}>Best 50 Tips For Heavy Fitness.</Link></h6>
-                                                <span className="post-date"> AUGUST 22, 2023</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div className="col-xl-3 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
                                 <div className="widget widget_locations">
                                     <h4 className="footer-title">Locations</h4>
                                     <div className="clearfix">
-                                        <h6>Washington</h6>
-                                        <p>1559 Alabama Ave SE, DC 20032, Washington, USA</p>
+                                        <h6>Jamaica</h6>
+                                        <p>4 Church Street; Linstead; St Catherine</p>
                                         {SVGICON.map}
                                     </div>
                                 </div>
@@ -100,7 +69,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-bottom">
                         <div className="text-center"> 
-                            <span className="copyright-text">Copyright © {update.getFullYear()} <Link to="https://dexignzone.com/" rel="noreferrer" target="_blank" >DexignZone</Link>. All rights reserved.</span> 
+                            <span className="copyright-text">Copyright © {update.getFullYear()} <Link to="https://infoquotient.com" rel="noreferrer" target="_blank" >Black Fuse Fitness</Link>. All rights reserved. Developed by <Link to="https://infoquotient.com" rel="noreferrer" target="_blank" >Info Quotient</Link></span> 
                         </div>
                     </div>
                 </div>

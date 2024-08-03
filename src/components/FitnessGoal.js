@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {Tab,Tabs, Nav} from 'react-bootstrap';
+import {Tab, Nav} from 'react-bootstrap';
 import { IMAGES } from '../constants/theme';
 
 const FitnessGoal = ({isOpenModal}) => {
@@ -65,7 +65,7 @@ const FitnessGoal = ({isOpenModal}) => {
                         </div>
                     </div>
                     <div className="image-box">
-                        <img src={IMAGES.boxpic2} alt="" />
+                        <img src={IMAGES.Img7} alt="" />
                         <div className="info-box">
                             <span><i className="flaticon-athletics text-primary"></i> Proffesional Trainer</span>
                         </div>

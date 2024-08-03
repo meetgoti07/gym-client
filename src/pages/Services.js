@@ -1,27 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import ClientSlider from '../components/ClientSlider';
-import { IMAGES, SVGICON } from '../constants/theme';
-import LatestSlider from '../elements/LatestSlider';
-import NewsLetter from '../elements/NewsLetter';
+
 import PageTitle from '../elements/PageTitle';
-import WorkoutSlider from '../elements/WorkoutSlider';
+
 import Swal from 'sweetalert2';
 import axios from 'axios';
 
-const wrapperBlog = [
-    { title: "Right Nutrition", image: IMAGES.boxlog1 },
-    { title: "Health & Fitness", image: IMAGES.boxlog2 },
-    { title: "Gym & Exercise", image: IMAGES.boxlog3 },
-    { title: "Health Motivation", image: IMAGES.boxlog4 },
-    { title: "Healthy Heart", image: IMAGES.boxlog5 },
-    { title: "Smoothie & Juice", image: IMAGES.boxlog6 },
-    { title: "Yoga & Exercise", image: IMAGES.boxlog7 },
-    { title: "Health Motivation", image: IMAGES.boxlog8 },
-];
+
 
 const Services = () => {
-    const [hover, setHover] = useState(0);
+    
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
 

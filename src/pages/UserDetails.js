@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createRef } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import {useLocation } from 'react-router-dom';
 import PageTitle from '../elements/PageTitle';
 import axios from 'axios';
 import Swal from 'sweetalert2';
@@ -14,7 +14,6 @@ const UserDetails = () => {
     const [streetAddress, setStreetAddress] = useState("");
     const [customMessage, setCustomessage] = useState("");
     const formRef = createRef();
-    const navigate = useNavigate();
     const { state } = useLocation();
 
     useEffect(() => {

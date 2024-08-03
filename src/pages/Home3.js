@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IMAGES } from "../constants/theme";
 import MainBanner3 from "../components/MainBanner3";
 import ModalVideo from "react-modal-video";
@@ -115,15 +115,15 @@ const Home3 = () => {
                 <ReactCompareSlider
                   itemOne={
                     <ReactCompareSliderImage
-                      src={IMAGES.beforeimg}
-                      srcSet={IMAGES.beforeimg}
+                      src={IMAGES.Img2}
+                      srcSet={IMAGES.Img2}
                       alt="Image one"
                     />
                   }
                   itemTwo={
                     <ReactCompareSliderImage
-                      src={IMAGES.afterimg}
-                      srcSet={IMAGES.afterimg}
+                      src={IMAGES.Img1}
+                      srcSet={IMAGES.Img1}
                       alt="Image two"
                     />
                   }
@@ -131,15 +131,13 @@ const Home3 = () => {
               </div>
               <div className="col-lg-6">
                 <div className="section-head style-1 wow fadeInUp">
-                  <h5 className="sub-title">GYm Time</h5>
+                  <h5 className="sub-title">Gym Time</h5>
                   <h2 className="title">
                     Workout Routine for Better{" "}
                     <span className="text-primary">Fitness Results</span>
                   </h2>
                   <p>
-                    Nunc vulputate urna ut erat posuere accumsan. Curabitur ut
-                    commodo mauris, ac volutpat dui. Nullam eget enim ut mi
-                    bibendum ultrices. Pellentesque non feugia.
+                    We believe that fitness is not just about working out; it's about feeling good, both physically and mentally. Our holistic approach focuses on overall well-being, combining physical exercise, nutrition guidance, and mental wellness to create a balanced and healthy lifestyle.
                   </p>
                 </div>
               </div>
@@ -182,7 +180,8 @@ const Home3 = () => {
         </section>
         <div className="map z-index-none">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28896.531392443423!2d75.81462525569334!3d25.133445080066668!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x537f208422eb8f28!2sW3ITEXPERTS%20-%20Software%20Development%20Company%20in%20kota!5e0!3m2!1sen!2sin!4v1669897446044!5m2!1sen!2sin"
+            title="Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.557526513655!2d-77.03546232520506!3d18.13821328288266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8edb0fc82270dc73%3A0x15b15a41c0140f5d!2s4%20Church%20St%2C%20Linstead%2C%20Jamaica!5e0!3m2!1sen!2sin!4v1722671658326!5m2!1sen!2sin"
             style={{
               border: "0",
               marginBottom: "-7px",

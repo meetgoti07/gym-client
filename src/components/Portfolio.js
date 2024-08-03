@@ -3,12 +3,12 @@ import { IMAGES } from "../constants/theme";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const carousel = [
-  { img: IMAGES.portfolioPic8 },
-  { img: IMAGES.portfolioPic9 },
-  { img: IMAGES.portfolioPic10 },
-  { img: IMAGES.portfolioPic8 },
-  { img: IMAGES.portfolioPic9 },
-  { img: IMAGES.portfolioPic10 },
+  { img: IMAGES.Img3 },
+  { img: IMAGES.Img4 },
+  { img: IMAGES.Img5 },
+  { img: IMAGES.Img6 },
+  { img: IMAGES.Img1 },
+  { img: IMAGES.Img2 },
 ];
 const Portfolio = () => {
   const swiperRef = useRef(null);

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 import swal from "sweetalert";
 import PageTitle from "../elements/PageTitle";
 import { Link } from "react-router-dom";
@@ -68,17 +68,16 @@ const ContactUs = () => {
                       <li>
                         <i className="fa-solid fa-location-dot"></i>
                         <p>
-                          832 Thompson Drive, San Fransisco CA 94107, United
-                          States
+                          4 Church Street; Linstead; St Catherine
                         </p>
                       </li>
                       <li>
                         <i className="fa-solid fa-phone"></i>
-                        <p>111-222-3333</p>
+                        <p>(876) 295-5173/ (876) 469-2523</p>
                       </li>
                       <li>
                         <i className="fa-solid fa-envelope"></i>
-                        <p>support@BodyShape.com</p>
+                        <p>blackfusefitness@gmail.com</p>
                       </li>
                     </ul>
                   </div>
@@ -88,39 +87,12 @@ const ContactUs = () => {
                       <li>
                         <Link
                           target="_blank"
-                          to="https://www.facebook.com/"
-                          rel="noreferrer"
-                        >
-                          <i className="fab fa-facebook-f" />
-                        </Link>
-                      </li>{" "}
-                      <li>
-                        <Link
-                          target="_blank"
-                          to="https://www.instagram.com/"
+                          to="https://www.instagram.com/blackfusefitness"
                           rel="noreferrer"
                         >
                           <i className="fab fa-instagram" />
                         </Link>
                       </li>{" "}
-                      <li>
-                        <Link
-                          target="_blank"
-                          to="https://twitter.com/"
-                          rel="noreferrer"
-                        >
-                          <i className="fab fa-twitter" />
-                        </Link>
-                      </li>{" "}
-                      <li>
-                        <Link
-                          target="_blank"
-                          to="https://whatsapp.com/"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-whatsapp" />
-                        </Link>
-                      </li>
                     </ul>
                   </div>
                   <svg
@@ -252,7 +224,7 @@ const ContactUs = () => {
           <div className="map-iframe">
             <iframe
               title="myFrame"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28896.531392443423!2d75.81462525569334!3d25.133445080066668!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x537f208422eb8f28!2sW3ITEXPERTS%20-%20Software%20Development%20Company%20in%20kota!5e0!3m2!1sen!2sin!4v1669897446044!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.557526513655!2d-77.03546232520506!3d18.13821328288266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8edb0fc82270dc73%3A0x15b15a41c0140f5d!2s4%20Church%20St%2C%20Linstead%2C%20Jamaica!5e0!3m2!1sen!2sin!4v1722671658326!5m2!1sen!2sin"
               style={{ border: "0", marginBottom: "-7px", width: "100%" }}
               allowFullScreen=""
               loading="lazy"
