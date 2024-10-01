@@ -6,19 +6,23 @@ import Collapse from "react-bootstrap/Collapse";
 import { MenuListArray2 } from "./MenuListArray2";
 import Cart from "../images/cart.png";
 import login from "../images/user.png";
-// import Profile from '../pages/Profile';
-
 
 const Header = () => {
-  const [headerFix, setheaderFix] = React.useState(false);
+  const [headerFix, setHeaderFix] = useState(false);
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setheaderFix(window.scrollY > 50);
-    });
+    const handleScroll = () => {
+      setHeaderFix(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
   return (
-    <>
-      <header className="site-header mo-left header header-transparent style-2">
+      <header className={`site-header mo-left header header-transparent style-2`}>
         <div className="top-bar">
           <div className="container">
             <div className="dz-topbar-inner d-flex justify-content-between align-items-center">
@@ -32,9 +36,8 @@ const Header = () => {
               <div className="dz-topbar-right">
                 <ul>
                   <li>
-                    <i className="fa-regular fa-clock"></i> Time 06:00 AM To
-                    08:00 PM
-                  </li>{" "}
+                    <i className="fa-regular fa-clock"></i> Time 06:00 AM To 07:00 PM
+                  </li>
                   <li>
                     <i className="fa fa-phone"></i> (876) 295-5173/ (876) 469-2523
                   </li>
@@ -43,67 +46,44 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div
-          className={`sticky-header main-bar-wraper navbar-expand-lg ${headerFix ? "is-fixed" : ""
-            }`}
-        >
+        <div className={`sticky-header main-bar-wraper navbar-expand-lg ${headerFix ? "is-fixed" : ""}`}>
           <Mainheader />
         </div>
-        {/* <!-- Main Header End --> */}
       </header>
-    </>
   );
 };
 
-export default Header;
-
-export const Mainheader = () => {
-  /* for sticky header */
-
+const Mainheader = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    var mainMenu = document.getElementById("OpenMenu");
+    const mainMenu = document.getElementById("OpenMenu");
     if (mainMenu) {
-      if (sidebarOpen) {
-        mainMenu.classList.add("show");
-      } else {
-        mainMenu.classList.remove("show");
-      }
+      mainMenu.classList.toggle("show", sidebarOpen);
     }
-  });
+  }, [sidebarOpen]);
 
   // Menu dropdown list
-  const reducer = (previousState, updatedState) => ({
-    ...previousState,
-    ...updatedState,
-  });
-
   const initialState = {
     active: "",
     activeSubmenu: "",
   };
-  
-  const [state, setState] = useReducer(reducer, initialState);
+
+  const [state, setState] = useReducer((prev, updated) => ({ ...prev, ...updated }), initialState);
+
   const handleMenuActive = (status) => {
-    setState({ active: status });
-    if (state.active === status) {
-      setState({ active: "" });
-    }
+    setState((prev) => ({ active: prev.active === status ? "" : status }));
   };
 
   const handleSubmenuActive = (status) => {
-    setState({ activeSubmenu: status });
-    if (state.activeSubmenu === status) {
-      setState({ activeSubmenu: "" });
-    }
+    setState((prev) => ({ activeSubmenu: prev.activeSubmenu === status ? "" : status }));
   };
 
-  function AddActiveMenu() {
-    MenuListArray2?.forEach((ell) => {
+  const AddActiveMenu = () => {
+    MenuListArray2.forEach((ell) => {
       if (ell.to === location.pathname) {
         setActiveMenu(ell.title);
       }
@@ -113,15 +93,23 @@ export const Mainheader = () => {
         }
       });
     });
-  }
-  useMemo(AddActiveMenu, [location.pathname]);
+  };
+
+  useEffect(() => {
+    AddActiveMenu();
+  }, [location.pathname]);
+
+  // Function to handle navigation and close the sidebar
+  const handleNavigation = (path) => {
+    setSidebarOpen(false); // Close the sidebar
+    navigate(path); // Navigate to the path
+  };
 
   return (
-    <>
       <div className="main-bar clearfix">
-        <div className=" clearfix">
+        <div className="clearfix">
           <div className="box-header clearfix">
-            {/* <!-- Website Logo --> */}
+            {/* Website Logo */}
             <div className="logo-header mostion logo-dark">
               <Link to={"/"}>
                 <img className="select_logo" src={IMAGES.logo} alt="" />
@@ -129,188 +117,73 @@ export const Mainheader = () => {
             </div>
 
             <button
-              className={`navbar-toggler navicon justify-content-end ${sidebarOpen ? "open" : "collapsed"
-                }`}
-              type="button"
-              onClick={() => setSidebarOpen(!sidebarOpen)}
+                className={`navbar-toggler navicon justify-content-end ${sidebarOpen ? "open" : "collapsed"}`}
+                type="button"
+                onClick={() => setSidebarOpen((prev) => !prev)}
             >
               <span></span>
               <span></span>
               <span></span>
             </button>
 
-            {/* <!-- Extra Nav --> */}
+            {/* Extra Nav */}
             <div className="extra-nav">
-              <div className="extra-cell">
-                {/* <button
-                  id="quik-search-btn"
-                  type="button"
-                  className="header-search-btn"
-                >
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                </button> */}
-                {/* <Link
-                  to={"/appointment"}
-                  className="btn btn-primary btn-skew appointment-btn"
-                >
-                  <span>Appointment</span>
-                </Link> */}
-              </div>
+              <div className="extra-cell"></div>
             </div>
-            {/* <!-- Extra Nav --> */}
 
-            {/* <!-- Search Form --> */}
+            {/* Search Form */}
             <div className="dz-quik-search">
               <form action="#">
                 <input
-                  name="search"
-                  defaultValue=""
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter Your Keyword ..."
+                    name="search"
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter Your Keyword ..."
                 />
                 <span id="quik-search-remove">
-                  <i className="fa-solid fa-xmark"></i>
-                </span>
+                <i className="fa-solid fa-xmark"></i>
+              </span>
               </form>
             </div>
 
-            {/* <!-- Header Nav --> */}
-            <div
-              id="navbarNavDropdown"
-              className={`header-nav navbar-collapse collapse justify-content-end ${sidebarOpen ? "show" : ""
-                }`}
-            >
+            {/* Header Nav */}
+            <div id="navbarNavDropdown" className={`header-nav navbar-collapse collapse justify-content-end ${sidebarOpen ? "show" : ""}`}>
               <div className="logo-header logo-dark">
                 <Link to={"/"}>
                   <img src={IMAGES.logo} alt="" />
                 </Link>
               </div>
-              <ul className="nav navbar-nav navbar navbar-left">
+              <ul className="nav navbar-nav navbar-left">
                 {MenuListArray2.map((item, index) => {
                   let menuClass = item.classChange;
-                  if (menuClass !== "sub-menu-down") {
-                    return (
-                      <li
-                        className={`${menuClass} ${item.title === activeMenu ? "active" : ""
-                          }`}
-                        // className={`${ menuClass} ${ location.pathname == item.to ? 'active'  : '' }`}
+                  const isActiveMenu = item.title === activeMenu;
 
-                        key={index}
-                        
-                      >
-                        {
-                          (localStorage.getItem('token') && (item.title === "login" || item.title === "Cart") ) ?
-                            <Link to={item.title==="login"?"Profile":'Cart'}><img src={item.title==="login"?login:Cart} style={{width:'1.9rem'}}/></Link>
-                              : <Link to={item.to} >{item.title}</Link>
-                        }
-                      </li>
-                    );
-                  } else {
-                    return (
+                  return (
                       <li
-                        className={`${menuClass} ${state.active === item.title ? "open active" : ""
-                          } ${item.title === activeMenu ? "active" : ""}`}
-                        // <li className={`${ menuClass} ${ location.pathname == item.to ? 'active'  : '' }`}
-                        key={index}
+                          className={`${menuClass} ${isActiveMenu ? "active" : ""}`}
+                          key={index}
                       >
-                        {item.content && item.content.length > 0 ? (
-                          <>
-                            <Link
-                              to={"#"}
-                              onClick={() => {
-                                handleMenuActive(item.title);
-                              }}
-                            >
+                        {(localStorage.getItem('token') && (item.title === "login" || item.title === "Cart")) ? (
+                            <Link to={item.title === "login" ? "Profile" : "Cart"}>
+                              <img src={item.title === "login" ? login : Cart} style={{ width: '1.9rem' }} />
+                            </Link>
+                        ) : (
+                            <Link to={item.to} onClick={() => handleNavigation(item.to)}>
                               {item.title}
                             </Link>
-                            <Collapse
-                              in={state.active === item.title ? true : false}
-                            >
-                              <ul
-                                className={`sub-menu ${menuClass === "mm-collapse" ? "open" : ""
-                                  }`}
-                              >
-                                {item.content &&
-                                  item.content.map((data, index) => {
-                                    return (
-                                      <li
-                                        key={index}
-                                        className={`${state.activeSubmenu === data.title
-                                          ? "open"
-                                          : ""
-                                          }`}
-                                      //className={`${ menuClass} ${ location.pathname == data.to ? 'active'  : '' }`}
-                                      >
-                                        {data.content &&
-                                          data.content.length > 0 ? (
-                                          <>
-                                            <Link
-                                              to={data.to}
-                                              onClick={() => {
-                                                handleSubmenuActive(data.title);
-                                              }}
-                                            >
-                                              {data.title}
-                                              <i className="fa fa-angle-right" />
-                                            </Link>
-                                            <Collapse
-                                              in={
-                                                state.activeSubmenu ===
-                                                  data.title
-                                                  ? true
-                                                  : false
-                                              }
-                                            >
-                                              <ul
-                                                className={`sub-menu ${menuClass === "mm-collapse"
-                                                  ? "open"
-                                                  : ""
-                                                  }`}
-                                              >
-                                                {data.content &&
-                                                  data.content.map(
-                                                    (data, index) => {
-                                                      return (
-                                                        <>
-                                                          <li key={index}>
-                                                            <Link to={data.to}>
-                                                              {data.title}
-                                                            </Link>
-                                                          </li>
-                                                        </>
-                                                      );
-                                                    }
-                                                  )}
-                                              </ul>
-                                            </Collapse>
-                                          </>
-                                        ) : (
-                                          <Link to={data.to}>{data.title}</Link>
-                                        )}
-                                      </li>
-                                    );
-                                  })}
-                              </ul>
-                            </Collapse>
-                          </>
-                        ) : (
-                          <Link to={item.to}>{item.title}</Link>
                         )}
                       </li>
-                    );
-                  }
+                  );
                 })}
               </ul>
               <div className="dz-social-icon">
                 <ul>
                   <li>
-                    <Link
-                      target="_blank"
-                      to="https://www.instagram.com/blackfusefitness/"
-                      rel="noreferrer"
-                    >
+                    <Link target="_blank" to="https://www.instagram.com/blackfusefitness/" rel="noreferrer" className="mb-2">
                       <i className="fab fa-instagram"></i>
+                    </Link>
+                    <Link target="_blank" to="https://www.tiktok.com/@blackfusefitness" rel="noreferrer">
+                      <i className="fab fa-tiktok"></i>
                     </Link>
                   </li>
                 </ul>
@@ -319,6 +192,7 @@ export const Mainheader = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
+
+export default Header;

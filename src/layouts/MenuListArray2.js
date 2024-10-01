@@ -77,8 +77,8 @@ export const MenuListArray2 = [
 
     {
        
-                title: 'Services',
-                to: '/services',
+                title: 'Products',
+                to: '/products',
            
     },
     {

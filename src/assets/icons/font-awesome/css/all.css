@@ -4672,7 +4672,7 @@ readers do not read off random characters that represent icons */
 .fa-stopwatch::before {
   content: "\f2f2"; }
 
-.fa-stopwatch-20::before {
+.Yearfa-stopwatch-20::before {
   content: "\e06f"; }
 
 .fa-store::before {

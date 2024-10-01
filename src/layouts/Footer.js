@@ -24,8 +24,11 @@ const Footer = () => {
                                     <div className="dz-social-icon style-1">
                                         <ul>									
                                             <li>
-                                                <Link target="_blank" to="https://www.instagram.com/blackfusefitness" rel="noreferrer">
+                                                <Link  target="_blank" to="https://www.instagram.com/blackfusefitness" rel="noreferrer" className="m-2">
                                                     <i className="fab fa-instagram"></i>
+                                                </Link>
+                                                <Link target="_blank" to="https://www.tiktok.com/@blackfusefitness" rel="noreferrer">
+                                                    <i className="fab fa-tiktok"></i>
                                                 </Link>
                                             </li>{" "}
                                         </ul>
@@ -49,14 +52,10 @@ const Footer = () => {
                                     <ul>
                                         <li>
                                             <span className="days">Monday – Friday:</span>
-                                            <span className="time"><Link to={"/schedule"}>07:00 – 21:00</Link></span>
+                                            <span className="time"><Link to={"/schedule"}>06:00 AM – 07:00 PM</Link></span>
                                         </li>
                                         <li>
-                                            <span className="days">Saturday:</span>
-                                            <span className="time"><Link to={"/schedule"}>07:00 – 16:00</Link></span>
-                                        </li>
-                                        <li>
-                                            <span className="days">Sunday Closed:</span>
+                                            <span className="days">Sunday Closed</span>
                                         </li>
                                     </ul>
                                     <Link to={"/schedule"} className="btn-link" >More Here <i className="fa-solid fa-arrow-right m-l10"></i></Link>

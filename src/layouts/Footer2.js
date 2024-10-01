@@ -113,17 +113,11 @@ const Footer2 = () => {
                     <li>
                       <span className="days">Monday – Friday:</span>
                       <span className="time">
-                        <Link to={"/schedule"}>07:00 – 21:00</Link>
+                        <Link to={"/schedule"}>06:00 AM – 07:00 PM</Link>
                       </span>
                     </li>
                     <li>
-                      <span className="days">Saturday:</span>
-                      <span className="time">
-                        <Link to={"/schedule"}>07:00 – 16:00</Link>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="days">Sunday Closed:</span>
+                      <span className="days">Sunday Closed</span>
                     </li>
                   </ul>
                   <Link to={"/schedule"} className="btn-link">

@@ -9,8 +9,8 @@ const serviceList = [
   { title: "Cardio And More" },
   { title: "Personal Training" },
   { title: "Body Building" },
-  { title: "Boxing Classess" },
-  { title: "Cardio And More" },
+  { title: "Step Aerobics" },
+  { title: "Corporate Workouts" },
 ];
 const AboutServices = () => {
   return (
@@ -20,10 +20,6 @@ const AboutServices = () => {
           <div className="dz-media p-r20">
             <div className="image-box wow fadeInUp">
               <img src={IMAGES.aboutPic5} alt="" />
-              <div className="tag">
-                <h2>2 0</h2>
-                <h5>year experience</h5>
-              </div>
             </div>
             <img src={IMAGES.aboutPic6} alt="" className="wow fadeInUp" />
           </div>

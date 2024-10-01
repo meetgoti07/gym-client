@@ -13,6 +13,8 @@ export const IMAGES = {
   Img5: require("../assets/images/background/1 (5).jpg"),
   Img6: require("../assets/images/background/1 (6).jpg"),
   Img7: require("../assets/images/background/1(7).png"),
+  video1: require("../assets/images/video/video1.mp4"),
+  video2: require("../assets/images/video/video2.mp4"),
   BgImage1: require("../assets/images/background/bg1.png"),
   BgImage2: require("../assets/images/background/bg2.png"),
   BgImage3: require("../assets/images/background/bg3.png"),

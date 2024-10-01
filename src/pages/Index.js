@@ -68,7 +68,7 @@ function Index() {
             exact
             element={<PortfolioDetails />}
           />
-          <Route path="/services" exact element={<Services />} />
+          <Route path="/products" exact element={<Services />} />
           <Route path="/profile" exact element={<Profile />} />
           <Route path="/classes" exact element={<Classes />} />
           <Route path="/Cart" exact element={<Cart />} />

@@ -88,19 +88,10 @@ const ContectInfo = () => {
           <div className="widget widget_working style-2 mb-4 mb-lg-0 bg-dark wow fadeInUp">
             <ul>
               <li>
-                <span className="days">Monday – Friday:</span>
-                <span className="time">
-                  <Link to="/schedule">07:00 – 21:00</Link>
-                </span>
+                <span className="days">Monday – Saturday:</span>
               </li>
               <li>
                 <span className="days">Sunday Closed:</span>
-              </li>
-              <li>
-                <span className="days">Saturday:</span>
-                <span className="time">
-                  <Link to="/schedule">07:00 – 16:00</Link>
-                </span>
               </li>
               <li>
                 <Link

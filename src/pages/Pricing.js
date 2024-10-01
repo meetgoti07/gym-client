@@ -181,8 +181,8 @@ const Pricing = () => {
                                                     <div className="pricingtable-title">{data.title}</div>
 
                                                     <div className="pricingtable-price">
-                                                        <h2 className="pricingtable-bx text-primary">${data.rate}<small>/ Month</small></h2>
-                                                        <p>A good choice when working remotely With Your Clients</p>
+                                                        <h2 className="pricingtable-bx text-primary">${data.rate}</h2>
+
                                                     </div>
                                                     <ul className="pricingtable-features">
                                                         {data.features.map((feature, index) => (

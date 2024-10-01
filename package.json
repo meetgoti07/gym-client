@@ -1,5 +1,5 @@
 {
-  "name": "blackFuseFitness",
+  "name": "blackfusefitness",
   "version": "0.1.0",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",

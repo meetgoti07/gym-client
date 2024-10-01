@@ -11,10 +11,10 @@ import loginbg from "../images/pic1.png";
 import { IMAGES } from '../constants/theme';
 
 function Login(props) {
-	const [email, setEmail] = useState('harshdob937@gmail.com');
+	const [email, setEmail] = useState(null);
 	let errorsObj = { email: '', password: '' };
 	const [errors, setErrors] = useState(errorsObj);
-	const [password, setPassword] = useState('harsh@123');
+	const [password, setPassword] = useState(null);
 	const navigate = useNavigate();
 	// const dispatch = useDispatch();
 

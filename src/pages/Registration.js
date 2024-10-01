@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import logo from '../images/logo-full.png'
+import logo from '../assets/images/logo.png';
 
 function Register(props) {
     const [email, setEmail] = useState('');

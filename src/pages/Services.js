@@ -90,7 +90,7 @@ const Services = () => {
     return (
         <>
             <div className="page-content bg-white">
-                <PageTitle activePage="Services" parentTitle="Services" />
+                <PageTitle activePage="Products" parentTitle="Products" />
                 <section className="content-inner overflow-hidden" >
                     <div className="container">
                         <div className="row">
